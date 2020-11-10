@@ -2,6 +2,7 @@ package com.example.prueba2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn;
+    private final String GREETER ="Hola esto es el segundo activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
        btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Toast.makeText(MainActivity.this,"boton clickeado",Toast.LENGTH_LONG).show();
+              //acceder a otro activity y mostrar string
+               Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+               intent.putExtra("greeter", GREETER);
+               startActivity(intent);
 
            }
        });

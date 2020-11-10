@@ -4,19 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
-    <Button
-        android:id="@+id/buttonMain"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#FF4081"
-        android:text="mi boton"
-        android:textColor="#FFFFFF"
+    <TextView
+        android:id="@+id/textViewMain"
+        android:layout_width="269dp"
+        android:layout_height="38dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="667dp" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
